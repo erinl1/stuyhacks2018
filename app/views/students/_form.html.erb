@@ -29,6 +29,10 @@
     <%= form.label :school_id %>
     <%= form.select :school_id, options_from_collection_for_select(School.all, :id, :name), class: 'dropdown' %>
   </div>
+  <div class="field">
+    <%= form.label :lines %>
+    <%= form.text_area :lines, class: 'dropdown' %>
+  </div>
 
   <div class="field">
     <%= form.label :time_to_school %>
