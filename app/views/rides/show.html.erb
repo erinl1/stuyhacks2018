@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Time:</strong>
+  <%= time_ago_in_words(@ride.created_at) %> ago
+<%= (@ride.created_at).strftime("%D") %>
+<%= (@ride.created_at).strftime("%I") %>:<%= (@ride.created_at).strftime("%M") %>:<%= (@ride.created_at).strftime("%S") %>
+<%= (@ride.created_at).strftime("%p") %>
+
+</p>
+
+<p>
+  <strong>Station:</strong>
+  <%= @ride.station %>
+</p>
+
+<p>
+  <strong>Metrocard:</strong>
+  <%= @ride.metrocard.student.metro_uuid %>
+</p>
+
+<%= link_to 'Edit', edit_ride_path(@ride) %> |
+<%= link_to 'Back', rides_path %>

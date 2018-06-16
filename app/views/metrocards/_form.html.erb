@@ -1,0 +1,22 @@
+<%= form_with(model: metrocard, local: true) do |form| %>
+  <% if metrocard.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(metrocard.errors.count, "error") %> prohibited this metrocard from being saved:</h2>
+
+      <ul>
+      <% metrocard.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :student_id %>
+    <%= form.select :student_id, options_from_collection_for_select(Student.all, :id, :name), class: 'dropdown' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

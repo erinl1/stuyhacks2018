@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time: 2018-06-16
+  station: MyString
+  metrocard: one
+
+two:
+  time: 2018-06-16
+  station: MyString
+  metrocard: two

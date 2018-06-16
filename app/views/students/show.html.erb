@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @student.name %>
+</p>
+
+<p>
+  <strong>UUID:</strong>
+  <%= @student.metro_uuid %>
+</p>
+<p>
+  <strong>Address:</strong>
+  <%= @student.address %>
+</p>
+
+<p>
+  <strong>School:</strong>
+  <%= @student.school.name %>
+</p>
+
+<p>Coordinates: <%= @student.latitude %> <%= @student.longitude %></p>
+
+<%= link_to 'Edit', edit_student_path(@student) %> |
+<%= link_to 'Back', students_path %>
