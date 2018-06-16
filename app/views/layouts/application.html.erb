@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
-    <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
     <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+    <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Lato:300,600">
     <title>Stuyhacks2018</title>
     <style>
     .field {
       width: 50%;
     }
+    h1 {
+      font-family: "Lato";
+      font-weight: 600;
+      column-rule-color: "Purple";
+    }
+    .container {
+      font-family: "Lato";
+      font-weight: 300;
+    }
+
     </style>
     <%= csrf_meta_tags %>
 
@@ -17,6 +27,9 @@
   </head>
 
   <body>
-  <center>  <%= yield %></center>
+    <div class = 'container'>
+
+      <center><%= yield %></center>
+    </div>
   </body>
 </html>
