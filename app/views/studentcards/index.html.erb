@@ -13,7 +13,7 @@
   <tbody>
     <% @studentcards.each do |studentcard| %>
       <tr>
-        <td><%= studentcard.student %></td>
+        <td><%= studentcard.student.name %></td>
         <td><%= link_to 'Show', studentcard %></td>
         <td><%= link_to 'Edit', edit_studentcard_path(studentcard) %></td>
         <td><%= link_to 'Destroy', studentcard, method: :delete, data: { confirm: 'Are you sure?' } %></td>

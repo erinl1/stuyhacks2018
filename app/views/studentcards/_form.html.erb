@@ -13,7 +13,8 @@
 
   <div class="field">
     <%= form.label :student_id %>
-    <%= form.text_field :student_id, id: :studentcard_student_id %>
+    <%= form.select :student_id, options_from_collection_for_select(Student.all, :id, :name), class: 'dropdown' %>
+
   </div>
 
   <div class="actions">
