@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180617021746) do
+ActiveRecord::Schema.define(version: 20180617022728) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 20180617021746) do
     t.float "latitude"
     t.string "metro_uuid"
     t.text "lines", default: [], array: true
+    t.string "student_uuid"
     t.index ["school_id"], name: "index_students_on_school_id"
   end
 
