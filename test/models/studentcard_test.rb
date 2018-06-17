@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class SwipeIdTest < ActiveSupport::TestCase
+class StudentcardTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

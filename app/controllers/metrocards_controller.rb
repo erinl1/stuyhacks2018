@@ -69,6 +69,6 @@ class MetrocardsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def metrocard_params
-      params.require(:metrocard).permit(:student_id,  :metro_uuid)
+      params.require(:metrocard).permit(:student_id, :metro_uuid)
     end
 end

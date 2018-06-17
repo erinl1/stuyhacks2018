@@ -1,0 +1,27 @@
+<%= form_with(model: swipe, local: true) do |form| %>
+  <% if swipe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(swipe.errors.count, "error") %> prohibited this swipe from being saved:</h2>
+
+      <ul>
+      <% swipe.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :studentcard_id %>
+    <%= form.text_field :studentcard_id, id: :swipe_studentcard_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time %>
+    <%= form.datetime_select :time, id: :swipe_time %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

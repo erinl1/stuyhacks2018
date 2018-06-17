@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Swipes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Studentcard</th>
+      <th>Time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @swipes.each do |swipe| %>
+      <tr>
+        <td><%= swipe.studentcard %></td>
+        <td><%= swipe.time %></td>
+        <td><%= link_to 'Show', swipe %></td>
+        <td><%= link_to 'Edit', edit_swipe_path(swipe) %></td>
+        <td><%= link_to 'Destroy', swipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Swipe', new_swipe_path %>

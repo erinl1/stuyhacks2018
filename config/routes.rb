@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :swipe_ids
+  resources :swipes
+  resources :studentcards
   resources :rides
   resources :metrocards
   resources :students

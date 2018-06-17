@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  studentcard: one
+  time: 2018-06-16 23:18:38
+
+two:
+  studentcard: two
+  time: 2018-06-16 23:18:38
