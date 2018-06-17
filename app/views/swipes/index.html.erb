@@ -16,8 +16,8 @@
     <% @swipes.each do |swipe| %>
       <tr>
         <td><%= (swipe.created_at).in_time_zone("America/New_York").strftime("%D") %>
-        <% swipe.time = (swipe.created_at).in_time_zone("America/New_York").strftime("%I:%M:%S %p").to_s %>
-        <%= swipe.time %></td>
+        <% (swipe.created_at).in_time_zone("America/New_York").strftime("%I:%M:%S %p").to_s %>
+        </td>
         <td><%= swipe.studentcard.student.student_uuid %></td>
         <td><%= swipe.studentcard.student.name %></td>
         <td><%= link_to 'Show', swipe %></td>
