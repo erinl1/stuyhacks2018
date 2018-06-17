@@ -28,9 +28,9 @@
  <%=school_start%>
  <%=leave_by%>
  <%message="on time"%>
- 31:<% hour = @swipe.created_at.in_time_zone("America/New_York").strftime("%H") %>-
- <% minute = @swipe.created_at.in_time_zone("America/New_York").strftime("%M") %>-
- <% second = @swipe.created_at.in_time_zone("America/New_York").strftime("%S") %>
+ 31:<% hour = @swipe.created_at.strftime("%H").to_i %>-
+ <% minute = @swipe.created_at.strftime("%M").to_i %>-
+ <% second = @swipe.created_at.strftime("%S").to_i %>
  32:<%=@swipe.created_at.to_s%>
  <%=split2 = school_start.to_s.split(":")%>
 
