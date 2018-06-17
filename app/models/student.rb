@@ -5,5 +5,5 @@ class Student < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: ->(student){student.address.present? and student.address_changed? }
   delegate :rides, to: :metrocard
-  delegate :rides, to: :studentcard
+  delegate :swipes, to: :studentcard
 end
