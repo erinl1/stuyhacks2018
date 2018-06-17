@@ -30,8 +30,9 @@
  <%message="on time"%>
  <%=@swipe.time%>
  <%=school_start%>
- 
-
+ <%=Time.parse(school_start)%>
+ <%=Time.parse(@swipe.time)%>
+ <%=Time.parse(school_start)-Time.parse(@swipe.time)%>
   <%=message%>
 
 </p>
