@@ -15,9 +15,9 @@
   <tbody>
     <% @swipes.each do |swipe| %>
       <tr>
-        <td><%= (ride.created_at).strftime("%D") %>
-        <%= (ride.created_at).strftime("%I") %>:<%= (ride.created_at).strftime("%M") %>:<%= (ride.created_at).strftime("%S") %>
-        <%= (ride.created_at).strftime("%p") %></td>
+        <td><%= (swipe.created_at).strftime("%D") %>
+        <%= (swipe.created_at).strftime("%I") %>:<%= (swipe.created_at).strftime("%M") %>:<%= (swipe.created_at).strftime("%S") %>
+        <%= (swipe.created_at).strftime("%p") %></td>
         <td><%= swipe.studentcard.student.student_uuid %></td>
         <td><%= swipe.studentcard.student.name %></td>
         <td><%= link_to 'Show', swipe %></td>
