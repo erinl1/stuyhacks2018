@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Student</th>
+      <th>Metro UUID</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,6 +15,7 @@
     <% @metrocards.each do |metrocard| %>
       <tr>
         <td><%= metrocard.student.name %></td>
+        <td><%= metrocard.student.metro_uuid %></td>
         <td><%= link_to 'Show', metrocard %></td>
         <td><%= link_to 'Edit', edit_metrocard_path(metrocard) %></td>
         <td><%= link_to 'Destroy', metrocard, method: :delete, data: { confirm: 'Are you sure?' } %></td>
