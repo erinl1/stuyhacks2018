@@ -1,3 +1,4 @@
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -36,7 +37,7 @@
  <% second = @swipe.created_at.strftime("%S").to_i %>
  32:<%=@swipe.created_at.to_s%>
  <%=split2 = school_start.to_s.split(":")%>
-
+ <%=@mta%>
  <%hrs2=school_start.to_s.split(":")[0].split(" ").last.to_i%>
  <%mins2=school_start.to_s.split(":")[1].to_i%>
  <%secs2=school_start.to_s.split(":")[2].to_i%>

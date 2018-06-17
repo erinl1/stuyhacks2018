@@ -1,3 +1,5 @@
+require 'net/http'
+require 'json'
 class SwipesController < ApplicationController
   before_action :set_swipe, only: [:show, :edit, :update, :destroy]
 
@@ -24,6 +26,12 @@ class SwipesController < ApplicationController
   # POST /swipes
   # POST /swipes.json
   def create
+
+    url = 'https://spiky-plane.glitch.me/'
+    uri = URI(url)
+    response = Net::HTTP.get(uri)
+    @mta=JSON.parse(response)
+
     @swipes = Student.find_by(student_uuid: params[:student_uuid]).swipes.create
     respond_to do |format|
       if @swipe.save
