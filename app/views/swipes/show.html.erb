@@ -1,33 +1,18 @@
 
-<p id="notice"><%= notice %></p>
 
-<p>
- <strong>Studentcard:</strong>
- <%= @swipe.studentcard %>
-</p>
-
-<p>
- <strong>Time:</strong>
- <%= @swipe.created_at %>
-</p>
 <p>
  <strong>Status:</strong>
  <% student = Student.find_by(student_uuid: @swipe.studentcard.student.student_uuid) %>
  <% lines=student.lines%>
  <% last_metro_swipe=student.rides.last.created_at%>
 
- <%= student.name %>
- <%= student.rides %>
- <%= student.rides.last %>
-  last<%= last_metro_swipe %>
- <%= lines %>
-<%= last_metro_swipe %>
+
 <% school=School.find_by(id: student.school_id)%>
  <% school_start= school.start_time %>
  <% leave_by= school_start-student.time_to_school %>
- <%=school%>
- <%=school_start%>
- <%=leave_by%>
+
+
+
  <%message="on time"%>
  31:<% mhour = last_metro_swipe.strftime("%H").to_i %>-
  <% mminute = last_metro_swipe.strftime("%M").to_i %>-
@@ -35,9 +20,9 @@
  31:<% hour = @swipe.created_at.strftime("%H").to_i %>-
  <% minute = @swipe.created_at.strftime("%M").to_i %>-
  <% second = @swipe.created_at.strftime("%S").to_i %>
- 32:<%=@swipe.created_at.to_s%>
- <%=split2 = school_start.to_s.split(":")%>
- <%=@mta.body%>
+
+
+
  <%hrs2=school_start.to_s.split(":")[0].split(" ").last.to_i%>
  <%mins2=school_start.to_s.split(":")[1].to_i%>
  <%secs2=school_start.to_s.split(":")[2].to_i%>

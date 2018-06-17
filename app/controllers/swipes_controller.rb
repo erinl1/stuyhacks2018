@@ -1,8 +1,5 @@
 require 'net/http'
 require 'json'
-url = 'https://spiky-plane.glitch.me/'
-uri = URI(url)
-response = Net::HTTP.get(uri)
 
 
 class SwipesController < ApplicationController
@@ -18,6 +15,9 @@ class SwipesController < ApplicationController
   # GET /swipes/1
   # GET /swipes/1.json
   def show
+    url = 'https://spiky-plane.glitch.me/'
+    uri = URI(url)
+    response = Net::HTTP.get(uri)
     @mta=JSON.parse(response)
   end
 
