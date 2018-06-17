@@ -31,10 +31,10 @@
  <%=@swipe.time%>
  <%=school_start%>
  <br>
- <%=@swipe.time.to_i%>
- <%=school_start.to_i%>
- <%time_difference_in_sec = (@swipe.time.to_i - school_start.to_i)%>
- <%=time_difference_in_sec%>
+ <%=time1.minute %>
+ <%=time2.minute %>
+ <%%>
+ <%=time_until = time2 - time1 %>
   <%=message%>
 
 </p>
