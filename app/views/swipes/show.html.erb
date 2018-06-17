@@ -30,9 +30,7 @@
  <%message="on time"%>
  <%=@swipe.time%>
  <%=school_start%>
- <%swipe_str=.strftime("%I:%M:%S").split(":")%>
- <%schl_str=school_start.strftime("%I:%M:%S").split(":")%>
- <%time_difference_in_sec = (@swipe.time.to_time.to_i - @school_start.to_time.to_i).abstime_difference_in_sec%>
+ <%time_difference_in_sec = (@swipe.time.to_i - @school_start.to_i).abstime_difference_in_sec%>
  <%=time_difference_in_sec%>
   <%=message%>
 
