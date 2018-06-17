@@ -1,8 +1,8 @@
 <div class = 'container'>
   <h1>Transit Tardiness</h1>
-<br>
   <div class="row">
     <div class="column">
+      <br>
       <%= link_to 'Schools', schools_path, class: 'button', style: 'width: 180px;color: white' %><br>
       <%= link_to 'Students', students_path, class: 'button', style: 'width: 180px;color: white' %><br>
       <%= link_to 'Metrocards', metrocards_path, class: 'button', style: 'width: 180px;color: white' %><br>
@@ -10,6 +10,19 @@
       <%= link_to 'School ID Cards', studentcards_path, class: 'button', style: 'width: 180px; color: white' %><br>
       <%= link_to 'School Swipes', swipes_path, class: 'button', style: 'width: 180px;color: white' %><br>
     </div>
-    <div class="column">.column</div>
+    <div class="column" style = 'font-family: "Lato"'>
+      <% line_num=0 %>
+    <%  text=File.open('mta.txt').read %>
+    <%  text.each_line do |line| %><br>
+    <div class="row">
+      <div class="column">
+        <%= line.split(" ")[0] %>
+      </div>
+      <div class="column">
+        <%= line.split(" ")[1] %> <%= line.split(" ")[2] %>
+      </div>
+    </div>
+    <%  end %>
+    </div>
   </div>
 </div>
