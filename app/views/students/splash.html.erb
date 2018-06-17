@@ -1,6 +1,7 @@
 <div class = 'container'>
   <h1>Transit Tardiness</h1>
   <div class="row">
+    <div class="column column-20"></div>
     <div class="column">
       <br>
       <%= link_to 'Schools', schools_path, class: 'button', style: 'width: 180px;color: white' %><br>
@@ -15,10 +16,10 @@
     <%  text=File.open('mta.txt').read %>
     <%  text.each_line do |line| %><br>
     <div class="row">
-      <div class="column">
+      <div class="column-10">
         <%= line.split(" ")[0] %>
       </div>
-      <div class="column">
+      <div class="column" style = 'text-align: left'>
         <%= line.split(" ")[1] %> <%= line.split(" ")[2] %>
       </div>
     </div>
