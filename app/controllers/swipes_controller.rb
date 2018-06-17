@@ -69,6 +69,6 @@ class SwipesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def swipe_params
-      params.require(:swipe).permit(:studentcard_id, :time)
+      params.require(:swipe).permit(:studentcard_id, :time, :student_uuid)
     end
 end
