@@ -28,11 +28,12 @@
  <%=school_start%>
  <%=leave_by%>
  <%message="on time"%>
- 31<%=@swipe.time%>
- 32<%=school_start%>
- 33<%=Time.parse(school_start)%>
- 34<%=Time.parse(@swipe.time)%>
- 35<%=Time.parse(school_start)-Time.parse(@swipe.time)%>
+ <%=@swipe.time%>
+ <%=school_start%>
+ <%swipe_str=.strftime("%I:%M:%S").split(":")%>
+ <%schl_str=school_start.strftime("%I:%M:%S").split(":")%>
+ <%time_difference_in_sec = (@swipe.time.to_time.to_i - @school_start.to_time.to_i).abstime_difference_in_sec%>
+ <%=time_difference_in_sec%>
   <%=message%>
 
 </p>
