@@ -24,7 +24,8 @@ class SwipeIdsController < ApplicationController
   # POST /swipe_ids
   # POST /swipe_ids.json
   def create
-    @swipe_id = SwipeId.new(swipe_id_params)
+    @swipe_ids = Student.find_by(student_uuid: params[:student_uuid]).swipe_ids.create
+
 
     respond_to do |format|
       if @swipe_id.save
@@ -69,6 +70,6 @@ class SwipeIdsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def swipe_id_params
-      params.require(:swipe_id).permit(:student_id, :time)
+      params.require(:swipe_id).permit(:student_id, :time, :student_uuid)
     end
 end
