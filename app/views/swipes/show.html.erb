@@ -30,7 +30,8 @@
  <%message="on time"%>
  <%=split1 = @swipe.time.to_s.split(":")%>
  <%=split2 = school_start.to_s.split(":")%>
-
+ <%=time2 = school_start.to_s.split(":")[1].split(" ")[school_start.to_s.split(":")[1].split(" ").length-1].to_i*3600+school_start.to_s.split(":")[2]*60+ school_start.to_s.split(":")[3]%>
+ <%=time2-time1%>
  <br>
   <%=message%>
 
