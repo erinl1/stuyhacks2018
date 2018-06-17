@@ -1,13 +1,35 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Studentcard:</strong>
-  <%= @swipe.studentcard %>
+ <strong>Studentcard:</strong>
+ <%= @swipe.studentcard %>
 </p>
 
 <p>
-  <strong>Time:</strong>
-  <%= @swipe.time %>
+ <strong>Time:</strong>
+ <%= @swipe.time %>
+</p>
+<p>
+ <strong>Status:</strong>
+ <% student = Student.find_by(student_uuid: @swipe.studentcard) %>
+ <% lines=student.lines%>
+ <% last_metro_swipe=student.rides.last.time%>
+ <%= student.name %>
+ <%= lines %>
+ <%= last_metro_swipe %>
+ <% school=School.find_by(id: student.school_id)%>
+ <% school_start= school.start_time %>
+ <% leave_by= school_start-student.time_to_school %>
+ <%message="on time"%>
+ <% if(@swipe.time-school_start<0) %>
+    <%message="late"%>
+ <%end%>
+ <% if(@swipe.time-school_start<0 && school_start-last_metro_swipe.time>student.time_to_school-180) %>
+    <%message="excused late"%>
+ <%end%>
+ <%=message%>
+ 
+
 </p>
 
 <%= link_to 'Edit', edit_swipe_path(@swipe) %> |
