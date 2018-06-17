@@ -28,14 +28,16 @@
  <%=school_start%>
  <%=leave_by%>
  <%message="on time"%>
- <%=split1 = @swipe.time.to_s.split(":")%>
+ 31:<%=split1 = @swipe.time.to_s.split(":")%>
+ 32:<%=split3 = @swipe.time.strftime("%H") %>
  <%=split2 = school_start.to_s.split(":")%>
 
- <%hrs=school_start.to_s.split(":")[0].split(" ").last.to_i%>
- <%mins=school_start.to_s.split(":")[1].to_i%>
- <%secs=school_start.to_s.split(":")[2].to_i%>
- <%time2 = 3600*hrs+60*mins+secs%>
+ <%hrs2=school_start.to_s.split(":")[0].split(" ").last.to_i%>
+ <%mins2=school_start.to_s.split(":")[1].to_i%>
+ <%secs2=school_start.to_s.split(":")[2].to_i%>
+ <%time2 = 3600*hrs2+60*mins2+secs2%>
  <%=time2%>
+
  <br>
   <%=message%>
 
