@@ -34,6 +34,7 @@
 <%while (line = fileObj.gets)%>
   <%if(line.split(" ")[1]!="GOOD")%>
   <%  bad_lines.push(line.split(" ")[0])%>
+  <% end %>
 <%end%>
 <%fileObj.close%>
  <%if(time2 - time1>=0)%>
