@@ -9,16 +9,16 @@ class SwipesController < ApplicationController
   # GET /swipes.json
   def index
     @swipes = Swipe.all
-    @mta=JSON.parse(response)
+    #@mta=JSON.parse(response)
   end
 
   # GET /swipes/1
   # GET /swipes/1.json
   def show
-    url = 'https://spiky-plane.glitch.me/'
-    uri = URI(url)
-    response = Net::HTTP.get(uri)
-    @mta=JSON.parse(response)
+    # url = 'https://spiky-plane.glitch.me/'
+    # uri = URI(url)
+    # response = Net::HTTP.get(uri)
+    # @mta=JSON.parse(response)
   end
 
   # GET /swipes/new
