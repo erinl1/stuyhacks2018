@@ -6,7 +6,6 @@
   <thead>
     <tr>
       <th>Time</th>
-      <th>Station</th>
       <th>Metrocard</th>
       <th>Student</th>
       <th colspan="3"></th>
@@ -19,7 +18,6 @@
         <td><%= (ride.created_at).strftime("%D") %>
         <%= (ride.created_at).strftime("%I") %>:<%= (ride.created_at).strftime("%M") %>:<%= (ride.created_at).strftime("%S") %>
         <%= (ride.created_at).strftime("%p") %></td>
-        <td><%= ride.station %></td>
         <td><%= ride.metrocard.student.metro_uuid%></td>
         <td><%= ride.metrocard.student.name%></td>
         <td><%= link_to 'Show', ride %></td>

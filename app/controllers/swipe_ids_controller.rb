@@ -26,7 +26,6 @@ class SwipeIdsController < ApplicationController
   def create
     @swipe_ids = Student.find_by(student_uuid: params[:student_uuid]).swipe_ids.create
 
-
     respond_to do |format|
       if @swipe_id.save
         format.html { redirect_to @swipe_id, notice: 'Swipe was successfully created.' }
