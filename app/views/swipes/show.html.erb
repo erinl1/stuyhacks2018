@@ -17,7 +17,10 @@
  <%= student.name %>
  <%= student.rides %>
  <%= student.rides.last %>
-  <%= student.rides.last.first %>
+  1<%= student.rides.last.attributes %>
+2  <% student.rides.last.attributes.each do |attr_name,attr_value|%>
+    <%=attr_name%>:<%=attr_value%>
+   <%end%>
  <%= lines %>
 <%= last_metro_swipe %>
 
