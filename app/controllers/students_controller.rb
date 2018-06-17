@@ -22,7 +22,7 @@ class StudentsController < ApplicationController
   def edit
   end
   def splash
-    ary = CSV.read(Rails.root.join("mta.csv"))
+
   end
   # POST /students
   # POST /students.json
