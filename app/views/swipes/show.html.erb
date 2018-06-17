@@ -14,10 +14,10 @@
 
 
  <%message="on time"%>
- 31:<% mhour = last_metro_swipe.strftime("%H").to_i %>-
+ <% mhour = last_metro_swipe.strftime("%H").to_i %>-
  <% mminute = last_metro_swipe.strftime("%M").to_i %>-
  <% msecond = last_metro_swipe.strftime("%S").to_i %>
- 31:<% hour = @swipe.created_at.strftime("%H").to_i %>-
+ <% hour = @swipe.created_at.strftime("%H").to_i %>-
  <% minute = @swipe.created_at.strftime("%M").to_i %>-
  <% second = @swipe.created_at.strftime("%S").to_i %>
 
@@ -29,7 +29,7 @@
  <%time2 = 3600*hrs2+60*mins2+secs2%>
   <%time1 = 3600*hour+60*minute+second%>
   <%time3 = 3600*mhour+60*mminute+msecond%>
-  time3: <%=time3%>
+  <%time3%>
  <%if(time2 - time1>=0)%>
     <%message="On time"%>
   <%else%>
@@ -39,7 +39,7 @@
     <%message="Excused Late"%>
   <%end%>
  <br>
-  <%=message%>
+  message:<%=message%>
 
 </p>
 
