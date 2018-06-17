@@ -1,7 +1,6 @@
 
 
-<p>
- <strong>Status:</strong>
+
  <% student = Student.find_by(student_uuid: @swipe.studentcard.student.student_uuid) %>
  <% lines=student.lines%>
  <% last_metro_swipe=student.rides.last.created_at%>
@@ -39,7 +38,7 @@
     <%message="Excused Late"%>
   <%end%>
  <br>
-  <%message=@swipe.time%>
+  <%=message%>
 
 </p>
 
