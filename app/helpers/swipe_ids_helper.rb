@@ -1,0 +1,2 @@
+module SwipeIdsHelper
+end
