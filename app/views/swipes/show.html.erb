@@ -16,10 +16,11 @@
  <% last_metro_swipe=student.rides.last.time%>
  <%= student.name %>
  <%= lines %>
- <%= last_metro_swipe %>
+ <!-- <%= last_metro_swipe %>
  <% school=School.find_by(id: student.school_id)%>
- <% school_start= school.start_time %>
+ <% school_start = school.start_time %>
  <% leave_by= school_start-student.time_to_school %>
+
  <%message="on time"%>
  <% if(@swipe.time-school_start<0) %>
     <%message="late"%>
@@ -27,8 +28,8 @@
  <% if(@swipe.time-school_start<0 && school_start-last_metro_swipe.time>student.time_to_school-180) %>
     <%message="excused late"%>
  <%end%>
- <%=message%>
- 
+ <%=message%> -->
+
 
 </p>
 
