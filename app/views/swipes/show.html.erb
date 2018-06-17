@@ -31,9 +31,7 @@
   <% if(@swipe.time-school_start<0) %>
      <%message="late"%>
   <%end%>
-  <% if(@swipe.time-school_start<0 && leave_by-last_metro_swipe.created_at>0) %>
-     <%message="excused late"%>
-  <%end%>
+
   <%=message%>
 
 </p>
