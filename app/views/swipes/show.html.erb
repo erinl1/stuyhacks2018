@@ -17,7 +17,10 @@
  <%= student.name %>
  <%= student.rides %>
  <%= student.rides.last %>
-  1<%= student.rides.last.attributes %>
+  1<%= student.rides.last[:created_at] %>
+  4<%= student.rides.last.created_at %>
+  5<%= student.rides.last.created_at.strftime("%r") %>
+  3<%= student.rides.last[:created_at].strftime("%r") %>
 2  <% student.rides.last.attributes.each do |attr_name,attr_value|%>
     <%=attr_name%>:<%=attr_value%>
    <%end%>
