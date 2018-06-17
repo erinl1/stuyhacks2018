@@ -28,7 +28,9 @@
  <%=school_start%>
  <%=leave_by%>
  <%message="on time"%>
- 31:<%= @swipe.created_at %>
+ 31:<%= @swipe.created_at.strf("%H") %>-
+ <%= @swipe.created_at.strf("%M") %>-
+ <%= @swipe.created_at.strf("%S") %>
  32:<%=@swipe.created_at.to_s%>
  <%=split2 = school_start.to_s.split(":")%>
 
