@@ -18,7 +18,7 @@
         <td><%= (ride.created_at).strftime("%D") %>
         <%= (ride.created_at).strftime("%I") %>:<%= (ride.created_at).strftime("%M") %>:<%= (ride.created_at).strftime("%S") %>
         <%= (ride.created_at).strftime("%p") %></td>
-        <td><%= swipe.studentcard.student %></td>
+        <td><%= swipe.studentcard.student.student_uuid %></td>
         <td><%= link_to 'Show', swipe %></td>
         <td><%= link_to 'Edit', edit_swipe_path(swipe) %></td>
         <td><%= link_to 'Destroy', swipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>

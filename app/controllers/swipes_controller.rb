@@ -24,8 +24,7 @@ class SwipesController < ApplicationController
   # POST /swipes
   # POST /swipes.json
   def create
-    @swipe = Swipe.new(swipe_params)
-
+    @swipes = Student.find_by(student_uuid: params[:student_uuid]).swipes.create
     respond_to do |format|
       if @swipe.save
         format.html { redirect_to @swipe, notice: 'Swipe was successfully created.' }
