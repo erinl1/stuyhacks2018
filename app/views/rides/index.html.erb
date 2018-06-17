@@ -17,7 +17,7 @@
     <% @rides.each do |ride| %>
       <tr>
         <td><%= (ride.created_at).strftime("%D") %>
-        <%= (ride.created_at).in_time_zone("America/New_York").strftime("%I") %>:<%= (ride.created_at).strftime("%M") %>:<%= (ride.created_at).strftime("%S") %>
+        <%= (ride.created_at).strftime("%I") %>:<%= (ride.created_at).strftime("%M") %>:<%= (ride.created_at).strftime("%S") %>
         <%= (ride.created_at).strftime("%p") %></td>
         <td><%= ride.station %></td>
         <td><%= ride.metrocard.student.metro_uuid%></td>
