@@ -47,8 +47,9 @@
  <%if(time2 - time1>=0)%>
     <%message="On time"%>
   <%else%>
-    <%message="Late"%>
-  <%if(time2 - time1<0 && )%>
+    <%message="Unexcused Late"%>
+  <%if(time2 - time1<0 && time3 <= time2)%>
+    <%message="Excused Late"%>
   <%end%>
 <%=final_time%>
  <br>
