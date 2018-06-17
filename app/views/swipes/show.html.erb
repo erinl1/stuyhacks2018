@@ -28,7 +28,7 @@
  <%=school_start%>
  <%=leave_by%>
  <%message="on time"%>
-  <% if(@swipe.time-school_start<0) %>
+  <% if(@swipe.time - school_start<0) %>
      <%message="late"%>
   <%end%>
 
