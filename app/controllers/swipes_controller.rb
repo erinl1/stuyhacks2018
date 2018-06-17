@@ -1,5 +1,5 @@
-require 'net/http'
-require 'json'
+#require 'net/http'
+#require 'json'
 
 
 class SwipesController < ApplicationController
@@ -24,19 +24,19 @@ class SwipesController < ApplicationController
   # GET /swipes/new
   def new
     @swipe = Swipe.new
-    @mta=JSON.parse(response)
+  #  @mta=JSON.parse(response)
   end
 
   # GET /swipes/1/edit
   def edit
-    @mta=JSON.parse(response)
+  #  @mta=JSON.parse(response)
   end
 
   # POST /swipes
   # POST /swipes.json
   def create
 
-    @mta=JSON.parse(response)
+  #  @mta=JSON.parse(response)
     @swipes = Student.find_by(student_uuid: params[:student_uuid]).swipes.create
     respond_to do |format|
       if @swipe.save
