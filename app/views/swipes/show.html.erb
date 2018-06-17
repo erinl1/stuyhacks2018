@@ -29,12 +29,19 @@
   <%time1 = 3600*hour+60*minute+second%>
   <%time3 = 3600*mhour+60*mminute+msecond%>
   <%time3%>
+  <%bad_lines=[]%>
+  <%fileObj = File.new("/mta.txt", "r")%>
+<%while (line = fileObj.gets)%>
+  <%if(line.split(" ")[1]!="GOOD")%>
+  <%  bad_lines.push(line.split(" ")[0])%>
+<%end%>
+<%fileObj.close%>
  <%if(time2 - time1>=0)%>
     <%message="On time"%>
   <%else%>
     <%message="Unexcused Late"%>
   <%end%>
-  <%if(time2 - time1<=0 && time3 <= time2)%>
+  <%if(time2 - time1<=0 && time3 <= time2 && (bad_lines & lines).length>0)%>
     <%message="Excused Late"%>
   <%end%>
  <br>
