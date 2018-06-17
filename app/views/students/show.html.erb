@@ -35,5 +35,5 @@
 
 <p>Coordinates: <%= @student.latitude %> <%= @student.longitude %></p>
 
-<%= link_to 'Edit', edit_student_path(@student) %> |
-<%= link_to 'Back', students_path %>
+<%= link_to 'Edit', edit_student_path(@student), class: 'button', style: 'color: white' %>
+<%= link_to 'Back', students_path, class: 'button', style: 'color: white' %>

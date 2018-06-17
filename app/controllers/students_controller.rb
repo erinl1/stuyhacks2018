@@ -21,7 +21,9 @@ class StudentsController < ApplicationController
   # GET /students/1/edit
   def edit
   end
-
+  def splash
+    ary = CSV.read(Rails.root.join("mta.csv"))
+  end
   # POST /students
   # POST /students.json
   def create

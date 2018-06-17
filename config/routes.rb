@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :transits
   resources :swipes
   resources :studentcards
   resources :rides
